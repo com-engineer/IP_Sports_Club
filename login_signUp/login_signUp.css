@@ -10,6 +10,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Container for both forms */
 .auth-container {
     display: flex;
     justify-content: center;
@@ -20,19 +21,21 @@ body {
 
 .auth-box {
     background-color: white;
-    justify-content: center;
-    align-items: center;
-
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+/* Form styling */
 .auth-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 100%;
 }
 
 .auth-form h2 {
@@ -49,6 +52,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    width: 100%;
 }
 
 .auth-form button {
@@ -60,6 +64,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+    width: 100%;
 }
 
 .auth-form button:hover {
@@ -79,7 +84,74 @@ body {
     text-decoration: underline;
 }
 
-/* Hide Sign-Up by Default */
+/* Specific to SignUp form */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: blue;
+}
+
+.form-container h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container form label {
+    font-weight: bold;
+}
+
+.form-container form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.form-container form button {
+    background-color: #007BFF;
+    color: white;
+    align-self: center;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%;
+}
+
+.form-container form button:hover {
+    background-color: #0056b3;
+}
+
+.form-container form p {
+    text-align: center;
+}
+
+.form-container form p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-container form p a:hover {
+    text-decoration: underline;
+}
+
+/* Hide elements */
 .hidden {
     display: none;
 }
