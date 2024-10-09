@@ -1,0 +1,168 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+header {
+    background-color: #333; /* Dark background */
+    padding: 1rem 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styling */
+header nav ul li img {
+    width: 50px; /* Adjust the size of the logo */
+    height: auto;
+    margin-right: 20px;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+header nav ul p {
+    color:white
+}
+
+header nav ul li a:hover {
+    background-color: #007BFF; /* Hover effect color */
+    border-radius: 5px;
+}
+
+/* Welcome Section Styling */
+.welcome {
+    background-color: rgb(242, 255, 0);
+    padding: 2rem;
+    margin: 2rem;
+   
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.welcome h1 {
+    color: #007BFF;
+}
+
+.welcome p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+/* Services Section Styling */
+#services {
+    padding: 2rem;
+    background-color: #4CD3DC;
+    text-align: center;
+}
+
+#services h2 {
+    color: #007BFF;
+    margin-bottom: 1.5rem;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-item {
+    background-color: rgb(21, 44, 1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: scale(1.05);
+}
+
+.service-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.service-item p {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+/* Proceed Button Styling */
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: #007BFF;
+}
+
+/* Box around Proceed Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Icon Styling */
+.service-item::before {
+    content: url('assets/icons/sports-icon.png'); /* Update with the path to the icon image */
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
