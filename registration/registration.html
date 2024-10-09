@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Registration</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Registration Form -->
+    <section class="registration-form">
+        <h1>Cricket Club Membership</h1>
+        <form id="RegistrationForm" action="registration.php" method="post">
+            <label for="playerName">Player Name*</label>
+            <input type="text" id="playerName" name="playerName" required>
+
+            <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birthDate">Player Birth Date*</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+
+            <label for="membership">Membership Details</label>
+            <input type="text" id="membership" name="membership">
+
+            <label for="payment">Payment Information*</label>
+            <input type="text" id="payment" name="payment" required>
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="membershipType">Membership Type*</label>
+            <input type="text" id="membershipType" name="membershipType" required>
+
+            <label for="skillLevel">Skill Level</label>
+            <input type="text" id="skillLevel" name="skillLevel">
+
+            <label for="startDate">Preferred Start Date*</label>
+            <input type="date" id="startDate" name="startDate" required>
+
+            <label for="trainingTime">Preferred Training Time*</label>
+            <input type="time" id="trainingTime" name="trainingTime" required>
+
+            <label for="membershipDuration">Duration of Membership*</label>
+            <input type="text" id="membershipDuration" name="membershipDuration" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section> 
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Navbar Styling */
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+header nav ul li a:hover {
+    background-color: #007BFF;
+    border-radius: 5px;
+}
+
+/* Form Section Styling */
+.registration-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.registration-form h1 {
+    text-align: center;
+    color: #007BFF;
+    margin-bottom: 1.5rem;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="date"],
+.registration-form input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    display: block;
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.registration-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Icon Styling for Inputs */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"] {
+    background-image: url('/assets/icons/user_icon.png'); /* Example icon */
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px; /* Adjust based on icon size */
+}
+
+#email {
+    background-image: url('/assets/icons/email_icon.png');
+}
+
+#birthDate {
+    background-image: url('/assets/icons/calendar_icon.png');
+}
+
+#payment {
+    background-image: url('/assets/icons/payment_icon.png');
+}
+
+#startDate {
+    background-image: url('/assets/icons/calendar_icon.png');
+}
+
+#trainingTime {
+    background-image: url('/assets/icons/clock_icon.png');
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .registration-form {
+        padding: 1rem;
+    }
+
+    .registration-form h1 {
+        font-size: 1.5rem;
+    }
+}
