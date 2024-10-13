@@ -12,50 +12,64 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
+                <li><img src="../assets/images/club_logo.png" alt="Sports Club Banner">
+                </li>
+                <li>User Name</li>
+                
             </ul>
         </nav>
     </header>
 
-    <!-- Registration Form -->
+   
     <section class="registration-form">
-        <h1>Cricket Club Membership</h1>
+        <h1>Membership Form</h1>
         <form id="RegistrationForm" action="registration.php" method="post">
-            <label for="playerName">Player Name*</label>
+        <label for="playerName">Player Name*</label>
             <input type="text" id="playerName" name="playerName" required>
-
-            <label for="email">Email Address*</label>
-            <input type="email" id="email" name="email" required>
+                        <label for="email">Email Address*</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
 
             <label for="birthDate">Player Birth Date*</label>
             <input type="date" id="birthDate" name="birthDate" required>
 
-            <label for="membership">Membership Details</label>
-            <input type="text" id="membership" name="membership">
-
-            <label for="payment">Payment Information*</label>
-            <input type="text" id="payment" name="payment" required>
-
             <label for="address">Address</label>
-            <input type="text" id="address" name="address" required>
+            <textarea id="address" name="address" rows="4" cols="50" placeholder="Enter your address here..."></textarea>
+            <section class="Membership-Details">
+            <h2 >Membership Details</h2>
+                 
+            <label for="membershipType">Membership Type*</label><br>
+            <select id="membershipType" name="membershipType">
+                <option value="Individual">Individual</option>
+                <option value="Family">Family</option>
+                <option value="Premium">Premium</option>
+                <option value="Student">Student</option>
+                <option value="Youth">Youth</option>
+                <option value="Senior">Senior</option>
 
-            <label for="membershipType">Membership Type*</label>
-            <input type="text" id="membershipType" name="membershipType" required>
-
-            <label for="skillLevel">Skill Level</label>
-            <input type="text" id="skillLevel" name="skillLevel">
-
+            </select>
             <label for="startDate">Preferred Start Date*</label>
             <input type="date" id="startDate" name="startDate" required>
-
+            <label >Duration*</label>
+            <select id="Duration" name="Duration">
+                <option value="Monthly">Monthly</option>
+                <option value="Quarterly">Quarterly</option>
+                <option value="Annually">Annually</option>
+                <option value="Lifetime">Lifetime</option>
+                <option value="Seasonal">Seasonal</option>
+            </select>
+            <label >Skill-level</label>
+            <select id="Skill-level" name="Skill-level">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Expert">Expert</option>
+            </select>
             <label for="trainingTime">Preferred Training Time*</label>
             <input type="time" id="trainingTime" name="trainingTime" required>
 
-            <label for="membershipDuration">Duration of Membership*</label>
-            <input type="text" id="membershipDuration" name="membershipDuration" required>
+
+   
+
+            
 
             <button type="submit">Submit</button>
         </form>

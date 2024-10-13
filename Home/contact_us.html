@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sports Club</title>
+    <link rel="stylesheet" href="about_contact.css"> <!-- Link to your main CSS file -->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="../assets/images/club_logo.png" alt="Sports Club Logo"></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="logout.php">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-us">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, comments, or concerns, please feel free to reach out to us. We’re here to help!</p>
+
+        <h2>Get in Touch</h2>
+        <form id="contactForm" action="send_message.php" method="post">
+            <label for="name">Name*</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message*</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+
+        <h2>Our Location</h2>
+        <p>[Club Address]</p>
+        <p>Email: [email@example.com]</p>
+        <p>Phone: [Phone Number]</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Sports Club Name]. All rights reserved.</p>
+    </footer>
+</body>
+</html>
