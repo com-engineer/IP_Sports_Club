@@ -19,8 +19,20 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Contact Us</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><img  id="logo" src="../assets/images/user_logo.jpeg" alt="User"></li>
-                             <p>Hi!! User</p>
+                <div class="user-section">
+                    <p id="user">
+                        <?php
+                        // Start session and check if user is logged in
+                         session_start();
+                         if (isset($_SESSION['username'])) {
+                              echo "Hi!! " . $_SESSION['username'];  // Display username from session
+                         } else {
+                             echo "Hi!! Guest";  // Default message if user not logged in
+                         }
+                         ?>
+                    </p>
+                    <a href="../User_dashboard/user_dashboard.html"><img id="logo" src="../assets/images/user_logo.jpeg" alt="User"></a>
+                </div>
             </ul>
         </nav>
     </header>
@@ -37,52 +49,52 @@
             <div class="service-item">
                 <img src="../assets/images/cricket.jpeg" alt="Cricket Club">
                 <p>Cricket Club</p>
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=Cricket"><button id="ProceedBtn" >Proceed</button></a>
             </div>
             <div class="service-item">
                 <img src="../assets/images/football.jpeg" alt="Football">
                 <p>Football</p>
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=Football"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
             <div class="service-item">
                 <img src="../assets/images/Batminton.jpeg" alt="Badminton">
                 <p>Badminton</p>
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=Badminton"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
             <div class="service-item">
                 <img src="../assets/images/swimming.jpeg" alt="Swimming">
                 <p>Swimming</p>
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=Swimming"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
             <div class="service-item">
                 <img src="../assets/images/chess.jpeg" alt="chess">
                 <p>chess</p>
 
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=chess"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
             <div class="service-item">
                 <img src="../assets/images/carrom.jpeg" alt="carrom">
                 <p>carrom</p>
 
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=carrom"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
             <div class="service-item">
                 <img src="../assets/images/bowling.jpeg" alt="bowling">
                 <p>bowling</p>
 
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=bowling"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
             <div class="service-item">
                 <img src="../assets/images/table_tennis.jpeg" alt="table_tennis">
                 <p>table_tennis</p>
 
-                <a href="../registration/registration.html"><button id="ProceedBtn" >Proceed</button></a>
+                <a href="../registration/registration.php?sport=table_tennis"><button id="ProceedBtn" >Proceed</button></a>
 
             </div>
         </div>

@@ -1,6 +1,10 @@
 <?php
+
+
 // Start the session
 session_start();
+
+// Enable error reporting
 
 // Database connection
 $servername = "localhost";
@@ -33,9 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Password is correct, start the session
             $_SESSION['username'] = $username;
             $_SESSION['loggedin'] = true;
+            $_SESSION['email'] = $user['email'];
 
             // Redirect to a logged-in area, e.g., dashboard.php
-            header("Location: ../sport_dashboard/sport.html");
+            header("Location: ../sport_dashboard/sport.php");
             exit();
         } else {
             // Invalid password

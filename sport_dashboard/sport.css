@@ -24,6 +24,23 @@ header nav ul li img {
     margin-right: 20px;
 }
 
+.user-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the user section to the right */
+}
+
+#user {
+    margin-right: 10px;
+    font-size: 16px;
+    color: white
+}
+
+#logo {
+    height: 40px; /* Adjust user logo size */
+    /* background-color:black; */
+}
+
 header nav ul li {
     margin-right: 20px;
 }
@@ -40,7 +57,8 @@ header nav ul p {
 }
 
 header nav ul li a:hover {
-    background-color: #007BFF; /* Hover effect color */
+    background-color: #007BFF;
+     /* Hover effect color */
     border-radius: 5px;
 }
 

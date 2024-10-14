@@ -6,36 +6,57 @@ body {
     color: #333;
 }
 
+/* Header and Navigation Styles */
 header {
-    background-color: #007bff;
-    padding: 10px;
+    background-color: #21B8E8; /* Dark Blue background */
+    padding: 10px 0;
+    box-shadow: 0px 4px 2px -2px gray;
 }
-
 nav ul {
-    list-style: none;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    list-style: none;
 }
 
 nav ul li {
-    margin: 0 15px;
+    display: inline;
 }
 
 nav ul li img {
-    height: 50px;
+    height: 50px; /* Adjust logo size */
 }
 
-nav a {
+nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 10px 20px;
+    font-size: 18px;
 }
 
-nav a:hover {
-    background-color: #0056b3;
+nav ul li a:hover {
+    background-color: #0056b3; /* Slightly darker blue on hover */
     border-radius: 5px;
 }
+
+nav ul li button a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 
 .about-us, .contact-us {
     padding: 20px;

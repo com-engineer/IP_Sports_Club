@@ -19,6 +19,23 @@ header {
     box-shadow: 0px 4px 2px -2px gray;
 }
 
+.user-section {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the user section to the right */
+}
+
+#user {
+    margin-right: 10px;
+    font-size: 16px;
+    color: white
+}
+
+#logo {
+    height: 40px; /* Adjust user logo size */
+    /* background-color:black; */
+}
+
 
 nav ul {
     display: flex;
