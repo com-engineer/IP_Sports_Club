@@ -10,7 +10,6 @@
 </head>
 <body>
 
-    <!-- Navbar -->
     <header>
         <nav>
             <ul>
@@ -22,12 +21,11 @@
                 <div class="user-section">
                     <p id="user">
                         <?php
-                        // Start session and check if user is logged in
                          session_start();
                          if (isset($_SESSION['username'])) {
-                              echo "Hi!! " . $_SESSION['username'];  // Display username from session
+                              echo "Hi!! " . $_SESSION['username'];  
                          } else {
-                             echo "Hi!! Guest";  // Default message if user not logged in
+                             echo "Hi!! Guest"; 
                          }
                          ?>
                     </p>
@@ -37,7 +35,6 @@
         </nav>
     </header>
 
-    <!-- Welcome Section -->
     <section class="welcome">
         <h1>Welcome to our Sports Club!</h1>
         <p>Here’s your chance to get involved and stay active. Below you'll find a variety of sports displayed. Whether you're a seasoned player or a beginner looking to learn something new, we have a place for you. Dive into the sport you love, meet new friends, and stay fit!</p>

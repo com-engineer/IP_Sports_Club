@@ -8,16 +8,13 @@
 </head>
 <body>
 <?php
-// Check if the sport name is set in the query string
 if (isset($_GET['sport'])) {
-    $sport = htmlspecialchars($_GET['sport']); // Get the sport name from the URL
+    $sport = htmlspecialchars($_GET['sport']); 
 } else {
-    // Handle the case when no sport is selected
     $sport = 'Unknown Sport';
 }
 
 ?>
-    <!-- Navbar -->
     <header>
         <nav>
             <ul>
@@ -26,12 +23,11 @@ if (isset($_GET['sport'])) {
                 <div class="user-section">
                     <p id="user">
                         <?php
-                        // Start session and check if user is logged in
                          session_start();
                          if (isset($_SESSION['username'])) {
-                              echo "Hi!! " . $_SESSION['username'];  // Display username from session
+                              echo "Hi!! " . $_SESSION['username']; 
                          } else {
-                             echo "Hi!! Guest";  // Default message if user not logged in
+                             echo "Hi!! Guest";  
                          }
                          ?>
                     </p>
@@ -47,10 +43,12 @@ if (isset($_GET['sport'])) {
         <h1>Membership Form</h1>
         <form id="RegistrationForm" action="form.php" method="post">
         <input type="hidden" name="sport" value="<?php echo $sport; ?>">
+        <input type="hidden" id="payment_id" name="payment_id">
+    <input type="hidden" id="payment_amount" name="payment_amount">
+
         <label for="playerName">Player Name*</label>
             <input type="text" id="playerName" name="playerName" required>
-                        <!-- <label for="email">Email Address*</label>
-            <input type="email" id="email" name="email" placeholder="example@gmail.com" required> -->
+
 
             <label for="birthDate">Player Birth Date*</label>
             <input type="date" id="birthDate" name="birthDate" required>
@@ -88,15 +86,47 @@ if (isset($_GET['sport'])) {
             </select>
             <label for="trainingTime">Preferred Training Time*</label>
             <input type="time" id="trainingTime" name="trainingTime" required>
-
-
-   
-
             
+           
+        <h2>Proceed for Payment</h2>
+        <button id="rzp-button1">Pay ₹500</button>
 
-            <button type="submit">Submit</button>
         </form>
     </section> 
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+document.getElementById('rzp-button1').onclick = function(e){
+    e.preventDefault();
 
+    var options = {
+        "key": "rzp_test_GcZZFDPP0jHtC4", 
+        "amount": "50000", 
+        "currency": "INR",
+        "name": "Sports Club",
+        "description": "Membership Registration Fee",
+        "image": "https://your-logo-url.com", 
+        "handler": function (response){
+            alert("Payment successful. Payment ID: " + response.razorpay_payment_id);
+
+    
+            document.getElementById('payment_amount').value = 500;
+            document.getElementById('RegistrationForm').submit(); 
+        },
+        "prefill": {
+            "name": "<?php echo $_SESSION['username'] ?? 'Guest'; ?>", 
+            "email": "<?php echo $_SESSION['email'] ?? ''; ?>",  
+            "contact": "9999999999"  
+        },
+        "theme": {
+            "color": "#3399cc"  
+        }
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.open();
+}
+</script>
+
+</script>
 </body>
 </html>

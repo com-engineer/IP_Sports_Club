@@ -1,13 +1,11 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Navbar Styling */
 header {
-    background-color: #333; /* Dark background */
+    background-color: #333;
     padding: 1rem 2rem;
 }
 
@@ -17,9 +15,8 @@ header nav ul {
     align-items: center;
 }
 
-/* Logo Styling */
 header nav ul li img {
-    width: 50px; /* Adjust the size of the logo */
+    width: 50px; 
     height: auto;
     margin-right: 20px;
 }
@@ -27,7 +24,7 @@ header nav ul li img {
 .user-section {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Pushes the user section to the right */
+    margin-left: auto; 
 }
 
 #user {
@@ -37,8 +34,7 @@ header nav ul li img {
 }
 
 #logo {
-    height: 40px; /* Adjust user logo size */
-    /* background-color:black; */
+    height: 40px;
 }
 
 header nav ul li {
@@ -58,11 +54,9 @@ header nav ul p {
 
 header nav ul li a:hover {
     background-color: #007BFF;
-     /* Hover effect color */
     border-radius: 5px;
 }
 
-/* Welcome Section Styling */
 .welcome {
     background-color: rgb(242, 255, 0);
     padding: 2rem;
@@ -82,7 +76,6 @@ header nav ul li a:hover {
     font-size: 1.2rem;
 }
 
-/* Services Section Styling */
 #services {
     padding: 2rem;
     background-color: #4CD3DC;
@@ -128,7 +121,6 @@ header nav ul li a:hover {
     color: #007BFF;
 }
 
-/* Proceed Button Styling */
 button {
     background-color: #007BFF;
     color: white;
@@ -148,7 +140,6 @@ button:hover {
     color: #007BFF;
 }
 
-/* Box around Proceed Button */
 button {
     display: block;
     width: 100%;
@@ -165,7 +156,6 @@ button:hover {
     color: white;
 }
 
-/* Icon Styling */
 .service-item::before {
     content: url('assets/icons/sports-icon.png'); /* Update with the path to the icon image */
     display: block;
@@ -175,7 +165,6 @@ button:hover {
     margin-bottom: 10px;
 }
 
-/* Footer Styling */
 footer {
     background-color: #333;
     color: white;

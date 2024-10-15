@@ -8,13 +8,10 @@ if (!isset($_SESSION['username'])) {
 }
 $sport = isset($_GET['sport']) ? $_GET['sport'] : '';
 
-// Database connection
 $conn = new mysqli('localhost', 'root', '', 'sports_club_database');
 
-// Check for form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // session_start();  // Start session if not already started
-    $email = $_SESSION['email'];  // Assuming email is stored in the session
+    $email = $_SESSION['email']; 
     $player_name = $_POST['playerName'];
     $birth_date = $_POST['birthDate'];
     $address = $_POST['address'];
@@ -22,12 +19,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $duration = $_POST['Duration'];
     $skill_level = $_POST['Skill-level'];
     $training_time = $_POST['trainingTime'];
-    $sport = $_POST['sport'];  // Hidden input for sport name
-    $start_date = $_POST['startDate'];  // Capture start date from form
+    $sport = $_POST['sport']; 
+    $start_date = $_POST['startDate'];
+    $transaction_amount = $_POST['payment_amount'];
 
-    // Insert form data into the registrations table, including the start date
-    $sql = "INSERT INTO registrations (email, sport_name, player_name, birth_date, address, membership_type, duration, skill_level, training_time, start_date)
-            VALUES ('$email', '$sport', '$player_name', '$birth_date', '$address', '$membership_type', '$duration', '$skill_level', '$training_time', '$start_date')";
+    $sql = "INSERT INTO registrations (email, sport_name, player_name, birth_date, address, membership_type, duration, skill_level, training_time, start_date,transaction_amount)
+            VALUES ('$email', '$sport', '$player_name', '$birth_date', '$address', '$membership_type', '$duration', '$skill_level', '$training_time', '$start_date','$transaction_amount')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<script>alert('Registration successful!'); window.location.href='../User_dashboard/user_dashboard.php';</script>";
