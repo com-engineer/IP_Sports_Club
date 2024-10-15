@@ -33,6 +33,8 @@
     $duration = '';
     $skill_level = '';
     $training_time = '';
+    $transaction_amount = '';
+
 
     if ($result->num_rows > 0) {
         $user = $result->fetch_assoc();
@@ -44,9 +46,11 @@
         $duration = $user['duration'];
         $skill_level = $user['skill_level'];
         $training_time = $user['training_time'];
+        $transaction_amount = $user['transaction_amount'];
+
     }
 
-    $sql_enrollments = "SELECT sport_name, membership_type, duration, skill_level, training_time FROM registrations WHERE email='$email'";
+    $sql_enrollments = "SELECT sport_name, membership_type, duration, skill_level, training_time,transaction_amount FROM registrations WHERE email='$email'";
     $enrollment_result = $conn->query($sql_enrollments);
     
     $conn->close();
@@ -90,6 +94,8 @@
                         echo "<p><strong>Duration:</strong> " . htmlspecialchars($enrollment['duration']) . "</p>";
                         echo "<p><strong>Skill Level:</strong> " . htmlspecialchars($enrollment['skill_level']) . "</p>";
                         echo "<p><strong>Training Time:</strong> " . htmlspecialchars($enrollment['training_time']) . "</p>";
+                        echo "<p><strong>Amount Paid:</strong> " . htmlspecialchars($enrollment['transaction_amount']) . "</p>";
+
                         echo "<hr>";
                     }
                 } else {

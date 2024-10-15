@@ -29,7 +29,7 @@
                          }
                          ?>
                     </p>
-                    <a href="../User_dashboard/user_dashboard.html"><img id="logo" src="../assets/images/user_logo.jpeg" alt="User"></a>
+                    <a href="../User_dashboard/user_dashboard.php"><img id="logo" src="../assets/images/user_logo.jpeg" alt="User"></a>
                 </div>
             </ul>
         </nav>
