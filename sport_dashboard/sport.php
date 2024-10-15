@@ -15,9 +15,10 @@
             <ul>
                 <li><img src="../assets/images/club_logo.png" alt="Sports Club Banner">
                 </li>
-                <li><a href="#">Home</a></li>
+                <p id="nav">Explore Your Interest</p>
+                <!-- <li><a href="">Home</a></li>
                 <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#">About Us</a></li> -->
                 <div class="user-section">
                     <p id="user">
                         <?php
@@ -96,6 +97,5 @@
             </div>
         </div>
     </section>
-    <script src="scripts.js"></script>
 </body>
 </html>
